@@ -1,56 +1,51 @@
-import React from 'react'
-import { FaCode } from "react-icons/fa6";
-import {FaMobileAlt } from "react-icons/fa";
-import { FaInfinity } from "react-icons/fa6";
+import React from 'react';
+import { FaCode, FaInfinity } from 'react-icons/fa6';
+import DetailCard from '../DetailCard/DetailCard';
 
-const About = () => {
+function About() {
   return (
-    <div className='flex flex-col bg-white m-5 mt-10 rounded-[18px] items-start'>
-        <div className='flex flex-row  m-4 mt-10 items-center '>
-            <h1 className='font-bold text-3xl font-robotoslab'>About</h1>
-            <div className='bg-gradient-to-r to-pink-500 from-rose-500  w-[5rem] h-[0.2rem] rounded-lg ml-6'/>
+    <div className="flex flex-col bg-white m-5 mt-10 rounded-[18px] items-start p-5">
+      <div className="flex flex-row  m-4 mt-10 items-center ">
+        <h1 className="font-bold text-3xl font-robotoslab">About</h1>
+        <div className="bg-gradient-to-r to-pink-500 from-rose-500  w-[10rem] h-[0.2rem] rounded-lg ml-6" />
+      </div>
+      <div className="flex flex-col m-4 lg:w-[80%] ">
+        <p className="font-poppins text-gray-600 tracking-wider lg:tracking-normal ">
+          Senior developer experienced in developing high end, scalable and
+          responsive web applications, REST Apis, SPAs with technologies
+          including ReactJS with Redux, Ruby on Rails, Java and Mysql.
+          <br />
+          <br />
+          My expertise are React, Javascript, Java and Spring boot. I have also
+          worked on devops including cloud services with AWS and OCI, Jenkins,
+          Docker, Terraform, Prometheus and monitoring apps.
+        </p>
+      </div>
+      <div className="flex flex-col w-full">
+        <h1 className="font-medium text-2xl font-poppins mt-5 ml-4 mb-6">
+          What I Do!
+        </h1>
+        <div className="flex flex-col lg:flex-row lg:justify-start lg:items-start">
+          <div className="flex flex-col">
+            <DetailCard
+              classname="flex flex-col bg-rose-50 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
+              header={<FaCode className="text-red-500" />}
+              title="Web Development"
+              description="Have experience working in various web technologies, languages and frameworks including Java, JavaScript, Spring and Spring Boot"
+            />
+          </div>
+          <div className="flex flex-col">
+            <DetailCard
+              classname="flex flex-col bg-sky-100 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
+              header={<FaInfinity className="text-purple-500" />}
+              title="DevOps & Cloud"
+              description="Have experience working on different cloud technologies including AWS & OCI, along with setting up devops pipeline for each of them"
+            />
+          </div>
         </div>
-        <div className='flex flex-col  m-4 '>
-           <p className='font-poppins text-gray-600 tracking-wide'>I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. 
-            I enjoy turning complex problems into simple, beautiful and intuitive designs.
-            <br/>
-            <br/>
-            My aim is to bring across your message 
-            and identity in the most creative way. I created web design for many famous brand companies.</p>
-           
-        </div>
-        <div className='flex flex-col w-full'>
-        <h1 className='font-medium text-2xl font-poppins mt-5 ml-4 mb-6'>What I Do!</h1>
-        <div className='flex flex-col bg-rose-50 w-[95%] self-center p-2 rounded-2xl mb-5'>
-            <div className='text-red-500 text-4xl m-3 mb-4'>
-            <FaCode />
-            </div>
-            <h1 className='m-2 font-poppins font-medium text-2xl  mb-4'>Web Development</h1>
-            <p className='m-2 font-poppins font-medium text-gray-500 tracking-wide mb-4'>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.
-            </p>
-        </div>
-        <div className='flex flex-col bg-sky-100 w-[95%] self-center p-2 rounded-2xl mb-5'>
-            <div className='text-sky-500 text-4xl m-3  mb-4'>
-            <FaMobileAlt />
-            </div>
-            <h1 className='m-2 font-poppins font-medium text-2xl  mb-4'>App Development</h1>
-            <p className='m-2 font-poppins font-medium text-gray-500 tracking-wide mb-4'>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.
-            </p>
-        </div>
-        <div className='flex flex-col bg-sky-100 w-[95%] self-center p-2 rounded-2xl mb-5'>
-            <div className='text-purple-500 text-4xl m-3  mb-4'>
-            <FaInfinity />
-            </div>
-            <h1 className='m-2 font-poppins font-medium text-2xl  mb-4'>DevOps & Cloud</h1>
-            <p className='m-2 font-poppins font-medium text-gray-500 tracking-wide mb-4'>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod tincidunt volutpat.
-            </p>
-        </div>
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default About
+export default About;
