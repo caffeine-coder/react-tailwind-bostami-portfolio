@@ -33,7 +33,7 @@ function Navbar() {
         <div className="flex flex-row mr-2 justify-center items-center">
           <button
             type="button"
-            className="relative drop-shadow-xl w-12 h-12 text-gray-800 flex items-center justify-center rounded-full mr-3 hover:bg-red-400 hover:text-white bg-white focus:outline-none overflow-hidden"
+            className="relative shadow-xl w-12 h-12 text-gray-800 flex items-center justify-center rounded-full mr-3 hover:bg-red-400 hover:text-white bg-white focus:outline-none overflow-hidden"
           >
             <IoMoonOutline className="text-2xl" />
           </button>

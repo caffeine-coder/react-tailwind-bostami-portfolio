@@ -105,7 +105,7 @@ function ProfileContainer() {
           );
         }}
       >
-        <PiDownloadLight className="m-2 ml-2 text-white text-4xl lg:text-xl animate-bounce" />
+        <PiDownloadLight className="m-2 ml-2 text-white text-3xl lg:text-xl animate-bounce" />
         <p className="text-white text-lg font-poppins mr-2 lg:text-sm">
           Download CV
         </p>
