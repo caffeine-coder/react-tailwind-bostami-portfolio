@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCode, FaInfinity } from 'react-icons/fa6';
 import DetailCard from '../DetailCard/DetailCard';
+import Home from '../../assets/images/Home.png';
 
 function About() {
   return (
@@ -9,8 +10,9 @@ function About() {
         <h1 className="font-bold text-3xl font-robotoslab">About</h1>
         <div className="bg-gradient-to-r to-pink-500 from-rose-500  w-[10rem] h-[0.2rem] rounded-lg ml-6" />
       </div>
-      <div className="flex flex-col m-4 lg:w-[80%] ">
-        <p className="font-poppins text-gray-600 tracking-wider lg:tracking-normal ">
+      <div className="flex flex-col items-center 2xl:flex-row 2xl:items-center 2xl:justify-around m-4  ">
+        <img src={Home} alt="Home" className="w-96 lg:w-[30rem]" />
+        <p className="font-poppins text-gray-600 tracking-wider lg:tracking-normal lg:text-lg">
           Senior developer experienced in developing high end, scalable and
           responsive web applications, REST Apis, SPAs with technologies
           including ReactJS with Redux, Ruby on Rails, Java and Mysql.
