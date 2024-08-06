@@ -12,7 +12,6 @@ import LargeNav from './Components/LargeNav/LargeNav';
 
 function App() {
   const activePage = useSelector((state) => state.page.activePage);
-
   return (
     <>
       <div className="lg:hidden">
