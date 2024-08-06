@@ -65,7 +65,7 @@ function ContactForm() {
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Use environment variable
         {
           from_name: values.name,
-          from_email: values.email,
+          from_emailId: values.email,
           message: values.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY, // Use environment variable
@@ -102,9 +102,7 @@ function ContactForm() {
                 focused[field] || values[field] ? '-top-6 text-sm' : 'top-0'
               } ${getFieldColor(field)}`}
             >
-              {field.charAt(0).toUpperCase() + field.slice(1)}
-              {' '}
-              *
+              {field.charAt(0).toUpperCase() + field.slice(1)} *
             </label>
             <div
               className={`relative ${getFieldColor(field)} mt-[4em] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:transition-all after:duration-300`}
