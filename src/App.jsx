@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-// src/App.js
-import React from 'react';
+
+import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { IoMoonOutline } from 'react-icons/io5';
 import Navbar from './Components/Navbar/Navbar';
@@ -12,10 +12,22 @@ import LargeNav from './Components/LargeNav/LargeNav';
 
 function App() {
   const activePage = useSelector((state) => state.page.activePage);
+  const aboutRef = useRef(null);
+  const resumeRef = useRef(null);
+  const worksRef = useRef(null);
+  const contactRef = useRef(null);
+
   return (
     <>
       <div className="lg:hidden">
-        <Navbar />
+        <Navbar
+          refs={{
+            aboutRef,
+            resumeRef,
+            worksRef,
+            contactRef,
+          }}
+        />
       </div>
       <div className="flex flex-col justify-around lg:flex-row lg:justify-center lg:pl-40 lg:pr-40">
         <div>
@@ -26,9 +38,15 @@ function App() {
             <LargeNav />
           </div>
           <div>
-            {activePage === 'About' && <About />}
-            {activePage === 'Resume' && <Resume />}
-            {activePage === 'Contact' && <Contact />}
+            <section ref={aboutRef}>
+              {activePage === 'About' && <About ref={aboutRef} />}
+            </section>
+            <section ref={resumeRef}>
+              {activePage === 'Resume' && <Resume ref={resumeRef} />}
+            </section>
+            <section ref={contactRef}>
+              {activePage === 'Contact' && <Contact ref={contactRef} />}
+            </section>
           </div>
         </div>
         <div className="hidden md:block md:fixed md:bottom-10 md:right-10 md:z-10">

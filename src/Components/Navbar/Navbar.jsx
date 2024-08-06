@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-// src/Components/Navbar/Navbar.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { IoMoonOutline, IoBriefcaseOutline } from 'react-icons/io5';
@@ -11,7 +11,10 @@ import { RiContactsBookLine } from 'react-icons/ri';
 import { setActivePage } from '../../store/pageSlice';
 import cc from '../../assets/images/cc.png';
 
-function Navbar() {
+function Navbar({ refs }) {
+  const {
+    aboutRef, resumeRef, worksRef, contactRef,
+  } = refs;
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -19,9 +22,12 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
-  const handleMenuItemClick = (page) => {
+  const handleMenuItemClick = (page, ref) => {
     dispatch(setActivePage(page));
     setIsOpen(false);
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -59,28 +65,28 @@ function Navbar() {
       >
         <ul className="py-2 px-3">
           <li
-            onClick={() => handleMenuItemClick('About')}
+            onClick={() => handleMenuItemClick('About', aboutRef)}
             className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 hover:text-red-500 cursor-pointer flex items-center`}
           >
             <LiaIdCard className="text-xl" />
             <span className="ml-2 text-sm font-normal">About</span>
           </li>
           <li
-            onClick={() => handleMenuItemClick('Resume')}
+            onClick={() => handleMenuItemClick('Resume', resumeRef)}
             className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 hover:text-red-500 cursor-pointer flex items-center`}
           >
             <GrDocumentUser className="text-base" />
             <span className="ml-2 text-sm font-normal">Resume</span>
           </li>
           <li
-            onClick={() => handleMenuItemClick('Works')}
+            onClick={() => handleMenuItemClick('Works', worksRef)}
             className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 hover:text-red-500 cursor-pointer flex items-center`}
           >
             <IoBriefcaseOutline className="text-xl" />
             <span className="ml-2 text-sm font-normal">Works</span>
           </li>
           <li
-            onClick={() => handleMenuItemClick('Contact')}
+            onClick={() => handleMenuItemClick('Contact', contactRef)}
             className={`py-1 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'} m-3 font-poppins text-gray-500 hover:text-red-500 cursor-pointer flex items-center`}
           >
             <RiContactsBookLine className="text-xl" />

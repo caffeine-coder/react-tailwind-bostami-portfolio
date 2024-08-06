@@ -102,7 +102,13 @@ function ContactForm() {
                 focused[field] || values[field] ? '-top-6 text-sm' : 'top-0'
               } ${getFieldColor(field)}`}
             >
+<<<<<<< HEAD
               {field.charAt(0).toUpperCase() + field.slice(1)} *
+=======
+              {field.charAt(0).toUpperCase() + field.slice(1)}
+              {' '}
+              *
+>>>>>>> e94c469 (Add scroll for sections)
             </label>
             <div
               className={`relative ${getFieldColor(field)} mt-[4em] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:transition-all after:duration-300`}
