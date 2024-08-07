@@ -1,5 +1,4 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-
 import React, { useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { IoMoonOutline } from 'react-icons/io5';

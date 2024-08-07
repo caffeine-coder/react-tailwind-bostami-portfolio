@@ -12,9 +12,7 @@ import { setActivePage } from '../../store/pageSlice';
 import cc from '../../assets/images/cc.png';
 
 function Navbar({ refs }) {
-  const {
-    aboutRef, resumeRef, worksRef, contactRef,
-  } = refs;
+  const { aboutRef, resumeRef, worksRef, contactRef } = refs;
   const [isOpen, setIsOpen] = useState(false);
   const dispatch = useDispatch();
 
