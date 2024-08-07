@@ -20,10 +20,10 @@ function DetailCard({
             <p className="font-poppins">{header}</p>
           </div>
         )}
-        <h1 className="m-2 font-poppins font-medium text-xl text-gray-700 mb-4">
+        <h1 className="m-2 font-poppins font-medium text-xl text-gray-700 dark:text-gray-200 mb-4">
           {title}
         </h1>
-        <p className="m-2 font-poppins font-medium text-gray-500 tracking-normal mb-4">
+        <p className="m-2 font-poppins font-medium text-gray-500 dark:text-gray-400 tracking-normal mb-4">
           {description}
         </p>
       </motion.div>

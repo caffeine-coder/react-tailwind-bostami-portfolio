@@ -1,4 +1,4 @@
-// src/Components/About/About.js
+// src/Components/About/About.jsx
 import React, { forwardRef } from 'react';
 import { FaCode, FaInfinity } from 'react-icons/fa6';
 import DetailCard from '../DetailCard/DetailCard';
@@ -7,15 +7,15 @@ import Home from '../../assets/images/Home.png';
 const About = forwardRef((props, ref) => (
   <div
     ref={ref}
-    className="flex flex-col bg-white m-5 mt-10 rounded-[18px] items-start p-5"
+    className="flex flex-col bg-white dark:bg-gray-800 dark:text-white m-5 mt-10 rounded-[18px] items-start p-5"
   >
     <div className="flex flex-row m-4 mt-10 items-center">
       <h1 className="font-bold text-3xl font-robotoslab">About</h1>
-      <div className="bg-gradient-to-r to-pink-500 from-rose-500 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
+      <div className="bg-gradient-to-r to-pink-500 from-rose-500 dark:to-pink-300 dark:from-rose-300 w-[10rem] h-[0.2rem] rounded-lg ml-6" />
     </div>
     <div className="flex flex-col items-center 2xl:flex-row 2xl:items-center 2xl:justify-around m-4">
       <img src={Home} alt="Home" className="w-96 lg:w-[30rem]" />
-      <p className="font-poppins text-gray-600 tracking-wider lg:tracking-normal lg:text-lg">
+      <p className="font-poppins text-gray-600 dark:text-gray-300 tracking-wider lg:tracking-normal lg:text-lg">
         Senior developer experienced in developing high end, scalable and
         responsive web applications, REST Apis, SPAs with technologies including
         ReactJS with Redux, Ruby on Rails, Java and Mysql.
@@ -33,16 +33,18 @@ const About = forwardRef((props, ref) => (
       <div className="flex flex-col lg:flex-row lg:justify-start lg:items-start">
         <div className="flex flex-col">
           <DetailCard
-            classname="flex flex-col bg-rose-50 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
-            header={<FaCode className="text-red-500" />}
+            classname="flex flex-col bg-rose-50 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
+            header={<FaCode className="text-red-500 dark:text-red-300" />}
             title="Web Development"
             description="Have experience working in various web technologies, languages and frameworks including Java, JavaScript, Spring and Spring Boot"
           />
         </div>
         <div className="flex flex-col">
           <DetailCard
-            classname="flex flex-col bg-sky-100 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
-            header={<FaInfinity className="text-purple-500" />}
+            classname="flex flex-col bg-sky-100 dark:bg-gray-700 w-[95%] self-center p-2 rounded-2xl mb-5 shadow-md lg:m-4"
+            header={
+              <FaInfinity className="text-purple-500 dark:text-purple-300" />
+            }
             title="DevOps & Cloud"
             description="Have experience working on different cloud technologies including AWS & OCI, along with setting up devops pipeline for each of them"
           />
