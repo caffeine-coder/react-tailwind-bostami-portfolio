@@ -14,7 +14,7 @@ const skills = [
 function Skill({ name, rating }) {
   return (
     <div className="flex items-center mb-4 justify-center  lg:justify-start">
-      <div className="text-xl font-medium font-poppins text-gray-500 mr-4  lg:flex-1 lg:w-40">
+      <div className="text-xl font-medium font-poppins text-gray-500 dark:text-gray-400 mr-4  lg:flex-1 lg:w-40">
         {name}
       </div>
       <div className="flex">
@@ -42,7 +42,7 @@ function Skills() {
     <section className="">
       <div className="container mx-auto px-4">
         <motion.div
-          className="bg-white rounded-lg  p-8"
+          className="bg-white rounded-lg  dark:bg-gray-700 p-8"
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: 'easeInOut' }}

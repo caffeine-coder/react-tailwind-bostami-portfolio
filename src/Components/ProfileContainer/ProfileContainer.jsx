@@ -18,14 +18,14 @@ import PersonalDetailCard from '../PersonalDetailCard/PersonalDetailCard';
 
 function ProfileContainer() {
   return (
-    <div className="flex flex-col bg-white m-5 mt-10 lg:mt-40 rounded-[18px] justify-center items-center p-5 lg:justify-start">
+    <div className="flex flex-col bg-white m-5 mt-10 lg:mt-40 rounded-[18px] justify-center items-center p-5 lg:justify-start dark:bg-gray-800">
       <div className=" mt-11 lg:mt-0 lg:absolute lg:top-20 mb-7 w-[14rem] h-[14rem] rounded-lg md:w-[16rem] md:h-[16rem] lg:w-[10rem] lg:h-[10rem] ">
         <img src={abhi} className="rounded-[18px] object-fill" alt="Profie" />
       </div>
-      <div className=" text-2xl md:text-3xl lg:text-xl lg:mt-20">
+      <div className=" text-2xl md:text-3xl lg:text-xl lg:mt-20 dark:text-gray-200">
         <p className="font-robotoslab">Abhishek P</p>
       </div>
-      <div className="bg-slate-100 rounded-lg mt-3 mb-4 p-1">
+      <div className="bg-slate-100 rounded-lg mt-3 mb-4 p-1 dark:bg-slate-700 dark:text-gray-400">
         <p className="font-poppins font-[550] m-2 md:text-lg lg:text-sm">
           {' '}
           Full Stack Developer
@@ -42,9 +42,9 @@ function ProfileContainer() {
         >
           <SocialCard
             icon={
-              <FaInstagram className="text-red-500 md:text-xl lg:text-sm" />
+              <FaInstagram className="text-red-500 dark:text-rose-600 md:text-xl lg:text-sm" />
             }
-            className="bg-gray-100 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
+            className="bg-gray-100  dark:bg-slate-700 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
           />
         </div>
         <div
@@ -53,8 +53,10 @@ function ProfileContainer() {
           }}
         >
           <SocialCard
-            icon={<FaYoutube className="text-red-500 md:text-xl lg:text-sm" />}
-            className="bg-gray-100 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
+            icon={
+              <FaYoutube className="text-red-500  dark:text-rose-600 md:text-xl lg:text-sm" />
+            }
+            className="bg-gray-100  dark:bg-slate-700 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
           />
         </div>
         <div
@@ -67,17 +69,17 @@ function ProfileContainer() {
         >
           <SocialCard
             icon={
-              <FaLinkedinIn className="text-blue-950 md:text-xl lg:text-sm" />
+              <FaLinkedinIn className="text-blue-950  dark:text-sky-600 md:text-xl lg:text-sm" />
             }
-            className="bg-gray-100 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
+            className="bg-gray-100  dark:bg-slate-700 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
           />
         </div>
       </div>
-      <div className="bg-gray-100 mb-5 flex flex-col ml-8 mr-8 w-full rounded-2xl justify-items-start lg:m-0">
+      <div className="bg-gray-100 dark:bg-gray-700 mb-5 flex flex-col ml-8 mr-8 w-full rounded-2xl justify-items-start lg:m-0">
         <div className="flex flex-row items-center m-2 mb-1 ">
           <SocialCard
             icon={<FaMobileAlt className="text-red-500 text-2xl lg:text-xl" />}
-            className="bg-white m-3 p-3 rounded-lg drop-shadow-xl  "
+            className="bg-white dark:bg-slate-800 m-3 p-3 rounded-lg drop-shadow-xl  "
           />
           <PersonalDetailCard title="Phone" detail="+91 9538982029" />
         </div>
@@ -87,7 +89,7 @@ function ProfileContainer() {
             icon={
               <MdOutlineMail className="text-green-600 text-2xl lg:text-xl" />
             }
-            className="bg-white m-3 p-3 rounded-lg drop-shadow-xl"
+            className="bg-white dark:bg-slate-800 m-3 p-3 rounded-lg drop-shadow-xl"
           />
           <PersonalDetailCard
             title="Email"
@@ -100,7 +102,7 @@ function ProfileContainer() {
             icon={
               <IoLocationSharp className="text-red-400 text-2xl lg:text-xl" />
             }
-            className="bg-white m-3 p-3 rounded-lg drop-shadow-xl"
+            className="bg-white dark:bg-slate-800 m-3 p-3 rounded-lg drop-shadow-xl"
           />
           <PersonalDetailCard title="Location" detail="Bangalore, India" />
         </div>
@@ -110,7 +112,7 @@ function ProfileContainer() {
             icon={
               <LuCalendarDays className="text-purple-500 text-2xl lg:text-xl" />
             }
-            className="bg-white m-3 p-3 rounded-lg drop-shadow-xl"
+            className="bg-white dark:bg-slate-800 m-3 p-3 rounded-lg drop-shadow-xl"
           />
           <PersonalDetailCard title="Birthday" detail="April 5, 1998" />
         </div>

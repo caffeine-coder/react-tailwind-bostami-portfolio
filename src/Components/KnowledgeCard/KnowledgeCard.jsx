@@ -12,12 +12,12 @@ function KnowledgeCard({ icon, name }) {
         transition={{ duration: 0.6, ease: 'easeInOut' }}
       >
         <div className="rounded-full bg-gradient-to-tr to-pink-500 via-indigo-300 from-rose-500 p-0.5 hover:-translate-y-4 hover:transition">
-          <div className="bg-white flex items-center p-5 rounded-full justify-center shadow-lg">
+          <div className="bg-white dark:bg-gray-700 flex items-center p-5 rounded-full justify-center shadow-lg">
             {icon}
           </div>
         </div>
         <div>
-          <p className=" text-sm font-poppins text-gray-500 md:text-lg self-center lg:text-sm lg:mt-2">
+          <p className=" text-sm font-poppins text-gray-500 md:text-lg self-center lg:text-sm lg:mt-2 dark:text-gray-400">
             {name}
           </p>
         </div>

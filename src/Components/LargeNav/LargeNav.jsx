@@ -15,7 +15,7 @@ function LargeNav() {
   };
   const activePage = useSelector((state) => state.page.activePage);
   return (
-    <div className="bg-white flex px-10 py-4 items-center justify-between w-[40em] rounded-2xl shadow-lg">
+    <div className="bg-white dark:bg-gray-800 flex px-10 py-4 items-center justify-between w-[40em] rounded-2xl shadow-lg">
       <div onClick={() => handleMenuItemClick('About')}>
         {activePage === 'About' ? (
           <NavBlocks icon={<LiaIdCard />} linkName="About" active />

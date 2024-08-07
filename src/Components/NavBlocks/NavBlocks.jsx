@@ -8,7 +8,7 @@ function NavBlocks({ icon, linkName, active }) {
       className={
         active
           ? `${baseClass} bg-gradient-to-r to-pink-500 from-rose-500  rounded-2xl text-white `
-          : `${baseClass} bg-gray-100 rounded-2xl text-gray-600 hover:bg-gradient-to-r hover:to-pink-500 hover:from-rose-500 hover:text-white`
+          : `${baseClass} bg-gray-100 dark:bg-gray-700 rounded-2xl text-gray-600 hover:bg-gradient-to-r hover:to-pink-500 hover:from-rose-500 hover:text-white dark:text-white`
       }
     >
       <div className="text-2xl">{icon}</div>
