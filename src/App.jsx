@@ -1,4 +1,3 @@
-// src/App.jsx
 import React, { useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { IoMoonOutline, IoSunnyOutline } from 'react-icons/io5';

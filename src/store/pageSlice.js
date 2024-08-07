@@ -1,4 +1,3 @@
-// src/features/page/pageSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {

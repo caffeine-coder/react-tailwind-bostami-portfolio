@@ -1,4 +1,3 @@
-// src/Components/About/About.jsx
 import React, { forwardRef } from 'react';
 import { FaCode, FaInfinity } from 'react-icons/fa6';
 import DetailCard from '../DetailCard/DetailCard';

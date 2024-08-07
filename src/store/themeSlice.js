@@ -11,7 +11,7 @@ const getInitialTheme = () => {
 };
 
 const initialState = {
-  mode: getInitialTheme(), // Initialize theme based on user's OS preference
+  mode: getInitialTheme(),
 };
 
 const themeSlice = createSlice({
