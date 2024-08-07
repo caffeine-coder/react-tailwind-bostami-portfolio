@@ -1,28 +1,37 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import { FaInstagram, FaLinkedinIn, FaMobileAlt } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaLinkedinIn,
+  FaMobileAlt,
+  FaYoutube,
+} from 'react-icons/fa';
 import { MdOutlineMail } from 'react-icons/md';
 import { IoLocationSharp } from 'react-icons/io5';
 import { LuCalendarDays } from 'react-icons/lu';
 import { PiDownloadLight } from 'react-icons/pi';
 import abhi from '../../assets/images/abhi.jpg';
+import oracle from '../../assets/images/oracle.png';
 import SocialCard from '../SocialCard/SocialCard';
 import PersonalDetailCard from '../PersonalDetailCard/PersonalDetailCard';
 
 function ProfileContainer() {
   return (
-    <div className="flex flex-col bg-white m-5 mt-10 rounded-[18px] justify-center items-center p-5 lg:justify-start">
-      <div className="mt-11 mb-7 w-[14rem] h-[14rem] rounded-lg md:w-[16rem] md:h-[16rem] lg:w-[10rem] lg:h-[10rem]">
+    <div className="flex flex-col bg-white m-5 mt-10 lg:mt-40 rounded-[18px] justify-center items-center p-5 lg:justify-start">
+      <div className=" mt-11 lg:mt-0 lg:absolute lg:top-20 mb-7 w-[14rem] h-[14rem] rounded-lg md:w-[16rem] md:h-[16rem] lg:w-[10rem] lg:h-[10rem] ">
         <img src={abhi} className="rounded-[18px] object-fill" alt="Profie" />
       </div>
-      <div className=" text-2xl md:text-3xl lg:text-xl">
+      <div className=" text-2xl md:text-3xl lg:text-xl lg:mt-20">
         <p className="font-robotoslab">Abhishek P</p>
       </div>
       <div className="bg-slate-100 rounded-lg mt-3 mb-4 p-1">
         <p className="font-poppins font-[550] m-2 md:text-lg lg:text-sm">
           {' '}
           Full Stack Developer
+          <div className="flex items-center justify-center">
+            <img src={oracle} alt="Oracle" className="w-[80px] h-[20px]" />
+          </div>
         </p>
       </div>
       <div className="flex flex-row w-[12rem] h-[2rem] mb-5 justify-around ">
@@ -35,6 +44,16 @@ function ProfileContainer() {
             icon={
               <FaInstagram className="text-red-500 md:text-xl lg:text-sm" />
             }
+            className="bg-gray-100 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
+          />
+        </div>
+        <div
+          onClick={() => {
+            window.open('https://www.youtube.com/caffeine-coders', '_blank');
+          }}
+        >
+          <SocialCard
+            icon={<FaYoutube className="text-red-500 md:text-xl lg:text-sm" />}
             className="bg-gray-100 rounded-lg justify-center items-center w-[2.3rem] h-[2.3rem] flex md:w-[2.6rem] md:h-[2.6rem] lg:w-[2.2rem] lg:h-[2.2rem]"
           />
         </div>
