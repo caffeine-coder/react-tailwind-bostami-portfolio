@@ -45,7 +45,7 @@ const scenes = [
   },
 ];
 
-const CORRECT_PASSWORD = 'starlight';
+const CORRECT_PASSWORD = 'butterfly';
 const IS_DEV_MODE = false; // set to false to re-enable password protection
 
 function VanGoghNight() {
