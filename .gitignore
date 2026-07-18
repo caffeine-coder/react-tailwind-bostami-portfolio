@@ -28,3 +28,6 @@ dist-ssr
 
 # .env file (if you have sensitive information there)
 .env
+
+.claude/
+.agents/
