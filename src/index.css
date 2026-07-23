@@ -1,10 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --font-manrope: 'Manrope', sans-serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-cinzel: 'Cinzel Variable', serif;
+  --font-neucha: 'Neucha', cursive;
+  --font-grotesk: 'Space Grotesk', sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EFE9E3;
 }

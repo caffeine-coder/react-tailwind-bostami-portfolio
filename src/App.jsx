@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Routes, Route } from 'react-router-dom';
 import { setTheme } from './store/themeSlice';
+import LandingPage from './LandingPage/LandingPage';
+import About from './About/About';
+import Work from './Work/Work';
+import Contact from './Contact/Contact';
 
 function App() {
   const dispatch = useDispatch();
@@ -22,7 +27,12 @@ function App() {
 
   return (
     <div className={themeMode === 'dark' ? 'dark' : ''}>
-      <div className="min-h-screen bg-gray-100 dark:bg-gray-900" />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/work" element={<Work />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
     </div>
   );
 }
