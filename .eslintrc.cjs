@@ -23,5 +23,7 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react/no-unescaped-entities': ['error', { forbid: ['>', '"', '}'] }],
+    'react/require-default-props': ['error', { functions: 'defaultArguments' }],
   },
 };
