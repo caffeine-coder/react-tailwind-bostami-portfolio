@@ -21,7 +21,7 @@ function MiddleContent() {
           muted
           playsInline
           aria-label="Developer at work"
-          className="w-full max-w-sm shrink-0 sm:max-w-xl lg:max-w-xl xl:max-w-200"
+          className="w-full max-w-sm shrink-0 bg-[#efe9e3] sm:max-w-xl lg:max-w-xl xl:max-w-200"
         />
       </div>
     </div>
