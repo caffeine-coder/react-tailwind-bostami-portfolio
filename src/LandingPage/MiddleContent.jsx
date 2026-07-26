@@ -12,15 +12,12 @@ function MiddleContent() {
       <div className="order-first flex flex-col items-center gap-y-8 sm:gap-y-14 lg:order-0 lg:flex-1 lg:flex-row lg:items-center lg:justify-center lg:gap-x-16">
         <Hero />
 
-        <video
-          src="/assets/developer.webm"
+        <img
+          src="/assets/developer.gif"
+          alt="Developer at work"
           width="800"
           height="450"
-          autoPlay
-          loop
-          muted
-          playsInline
-          aria-label="Developer at work"
+          fetchPriority="high"
           className="w-full max-w-sm shrink-0 sm:max-w-xl lg:max-w-xl xl:max-w-200"
         />
       </div>
