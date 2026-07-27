@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { stroke } from '../ease';
 
-const RESUME_URL = 'https://drive.google.com/u/1/uc?id=1fEwx0nzfCzSJFexJjB2ZhvlXsK7Js6aZ&export=download';
+const RESUME_URL = 'https://drive.google.com/uc?export=download&id=1c6LFhpz4eQl37EAH_gddpJsMHcCjUvHu';
 
 function ResumeLink() {
   return (
@@ -23,7 +23,6 @@ function ResumeLink() {
 
       <motion.a
         href={RESUME_URL}
-        target="_blank"
         rel="noreferrer"
         className="group relative inline-flex cursor-pointer items-center px-3 py-2 sm:px-5"
         whileHover="hover"
