@@ -8,6 +8,21 @@ import {
 import { DiJava } from 'react-icons/di';
 import { stroke } from '../ease';
 
+const services = [
+  {
+    name: 'Web apps',
+    detail: 'React and TypeScript front ends, with the APIs behind them.',
+  },
+  {
+    name: 'Mobile apps',
+    detail: 'Cross-platform builds that share the same stack and codebase.',
+  },
+  {
+    name: 'Cloud and infra',
+    detail: 'AWS, Docker and Terraform. Deploys that hold up under load.',
+  },
+];
+
 const tech = [
   { label: 'React', Icon: SiReact },
   { label: 'TypeScript', Icon: SiTypescript },
@@ -102,11 +117,14 @@ function AboutDetails() {
           transition={{ delay: 0.08, duration: 0.5, ease: 'easeOut' }}
         >
           <Heading>What I do</Heading>
-          <p className="max-w-sm font-manrope text-base leading-relaxed text-stone-600">
-            Front-end mostly, but I'll go as deep into the stack as a thing
-            needs. APIs, infrastructure, whatever's in the way. Right now I
-            lead a team doing exactly that.
-          </p>
+          <dl className="max-w-sm space-y-3 font-manrope text-base leading-relaxed text-stone-600">
+            {services.map(({ name, detail }) => (
+              <div key={name}>
+                <dt className="font-semibold text-stone-800">{name}</dt>
+                <dd>{detail}</dd>
+              </div>
+            ))}
+          </dl>
         </motion.div>
       </div>
 
